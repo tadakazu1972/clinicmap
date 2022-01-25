@@ -1,0 +1,56 @@
+
+/* x-large */
+.uk-button.uk-button-large.tm-button-xlarge {
+    font-size: 1.05em;
+    padding: 0.25em 6em;
+}
+
+/* button-default */
+.uk-button-default {
+    background-color: #fff;
+}
+.uk-button-default:hover,
+.uk-button-default:focus {
+    background-color: #f9f9f9;
+}
+
+/* button-primary */
+.uk-button-primary {
+    background-color: #00956E;
+}
+.uk-button-primary:hover,
+.uk-button-primary:focus {
+    background-color: #008260;
+}
+.tm-button-conversion {
+    font-size: 1.2em;
+}
+.uk-button-primary.tm-button-conversion {
+    line-height: 2.5em;
+    border-bottom: solid 4px #006b4f;
+}
+
+/* large tablet */
+@media screen and (max-width:1199px) {
+    
+}
+
+/* tablet */
+@media screen and (max-width:959px) {
+
+}
+
+/* large phone */
+@media screen and (max-width:639px) {
+    
+}
+
+/* phone */
+@media screen and (max-width:400px) {
+    
+}
+
+/* small phone */
+@media screen and (max-width:360px) {
+
+}

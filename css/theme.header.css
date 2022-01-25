@@ -1,0 +1,29 @@
+
+.uk-navbar-container > .uk-container .uk-navbar-left {
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.uk-navbar-item, 
+.uk-navbar-nav > li > a, 
+.uk-navbar-toggle {
+    min-height: 60px;
+}
+
+#header {
+    z-index: 980;
+    border-bottom: 1px #e5e5e5 solid;
+    background-color: #fff;
+}
+
+.tm-hamburger svg {
+    margin-bottom: 10px;
+}
+.tm-hamburger > div {
+    bottom: 5px;
+    z-index: -1;
+    width: 100%;
+    text-align: center;
+}
+.tm-hamburger > div > span {
+    font-size: 0.65em;
+}

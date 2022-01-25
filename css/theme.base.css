@@ -1,0 +1,95 @@
+
+/* font-family */
+body, .uk-logo, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6, p {
+    color: #1a1a1a;
+}
+.uk-logo, .uk-h1, .uk-h2, .uk-h3, .uk-h4, .uk-h5, .uk-h6, h1, h2, h3, h4, h5, h6, strong {
+    font-family: Lato, "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", YuGothic, "游ゴシック", "游ゴシック体", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif!important;
+}
+body, p, .gm-style {
+    font-family: Lato, "Noto Sans JP", "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "Yu Gothic Medium", "游ゴシック Medium", メイリオ, Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif!important;
+}
+
+/* link */
+h4 a,
+.tm-infowindow .uk-tab > li a {
+    color: #555;
+}
+.uk-link-toggle .uk-link-heading, a:not(.uk-button) i, a .uk-tile-default span {
+    color: #999;
+}
+a, 
+a.uk-card, 
+a .uk-tile-default span, 
+a:hover, 
+a:focus, 
+a.uk-card:hover, 
+a.uk-card:focus, 
+a:not(.uk-button) svg, 
+a:not(.uk-button):hover svg, 
+a:not(.uk-button):focus svg, 
+a:not(.uk-button) i, 
+a:not(.uk-button):hover i, 
+a:not(.uk-button):focus i, 
+.uk-logo:focus, 
+.uk-logo:hover, 
+.uk-link-toggle .uk-link-heading, 
+a span.uk-badge {
+    text-decoration: none;
+    transition: color 300ms 0s ease, background-color 300ms 0s ease, border-color 300ms 0s ease, box-shadow .1s ease-in-out;
+}
+a:hover, 
+a:focus, 
+a:hover .uk-tile-default span, 
+a:focus .uk-tile-default span, 
+a:not(.uk-button):hover svg, 
+a:not(.uk-button):focus svg, 
+a:not(.uk-button):hover i, 
+a:not(.uk-button):focus i, 
+.uk-logo:focus, 
+.uk-logo:hover, 
+.uk-link-toggle:focus .uk-link-heading, 
+.uk-link-toggle:hover .uk-link-heading, 
+.uk-active a:not(.uk-button) svg, 
+.uk-active a:not(.uk-button) i, 
+.uk-active a:not(.uk-button).uk-link-toggle .uk-link-heading {
+    color: #0c6a6d;
+}
+
+/* tab */
+.tm-infowindow .uk-tab > li.uk-active a {
+    color: #fff;
+    background-color: #00956E;
+    border-color: #00956E;
+}
+.tm-infowindow .uk-tab > li a:hover {
+    color: #fff;
+    background-color: #00956E;
+    border-color: #00956E;
+}
+
+/* large tablet */
+@media screen and (max-width:1199px) {
+    
+}
+
+/* tablet */
+@media screen and (max-width:959px) {
+
+}
+
+/* large phone */
+@media screen and (max-width:639px) {
+
+}
+
+/* phone */
+@media screen and (max-width:400px) {
+    
+    
+}
+
+/* small phone */
+@media screen and (max-width:360px) {
+
+}

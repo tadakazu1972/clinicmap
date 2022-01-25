@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb# article: http://ogp.me/ns/article#">
+    
+    <meta charset="utf-8">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-FL9Z5JCVZB"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-FL9Z5JCVZB');
+    </script>
+    
+    <title>大阪市コロナワクチンマップ</title>
+    <meta name="description" content="大阪市における新型コロナウイルスワクチンの接種が可能な場所をマップで掲載しています。">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="theme-color" content="#008260">
+    
+    <!-- ogp -->
+    <meta property="og:title" content="大阪市コロナワクチンマップ"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:description" content="大阪市における新型コロナウイルスワクチンの接種が可能な場所をマップで掲載しています。"/>
+    <meta property="og:url" content="https://www.city.osaka.lg.jp/contents/wdu280/covid19vaccinemap/"/>
+    <meta property="og:image" content="https://www.city.osaka.lg.jp/contents/wdu280/covid19vaccinemap/img/logo/ogimage.png"/>
+    <meta property="og:site_name" content="大阪市コロナワクチンマップ"/>
+    <meta property="og:locale" content="ja_JP"/>
+    <meta property="fb:app_id" content="1950423071901347"/>
+
+    <!-- lib -->
+    <link rel="stylesheet" type='text/css' href="https://fonts.googleapis.com/css?family=Lato%3A400%2C700%7CNoto+Sans+JP%3A400%2C700&#038;ver=5.3.2" media='all' />
+    <link rel="stylesheet" type="text/css" href="css/uikit.min.css">
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/jquery.csv-1.0.3.min.js"></script>
+    <script src="https://kit.fontawesome.com/992ab3d02d.js" crossorigin="anonymous"></script>
+
+    <!-- customize -->
+    <link rel="stylesheet" type="text/css" href="css/theme.base.css?version=0.0.2">
+    <link rel="stylesheet" type="text/css" href="css/theme.button.css?version=0.0.1">
+    <link rel="stylesheet" type="text/css" href="css/theme.breadcrumb.css?version=0.0.1">
+    <link rel="stylesheet" type="text/css" href="css/theme.header.css?version=0.0.2">
+    <link rel="stylesheet" type="text/css" href="css/theme.page.index.css?version=0.0.5">
+    <link rel="stylesheet" type="text/css" media="print" href="css/print.css?version=0.0.1">
+
+</head>
+<body>
+
+    <div id="dialog" class="uk-modal" uk-modal>
+        <div class="uk-modal-dialog uk-margin-auto-vertical">
+            <button class="uk-modal-close-default" type="button" uk-close></button>
+            <div id="dialog-title" class="uk-modal-header"></div>
+            <div id="dialog-body" class="uk-modal-body"></div>
+            <div class="uk-modal-footer uk-text-right">
+                <button id="dialog-button-close" class="uk-button uk-button-default uk-modal-close" type="button"></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="header" class="uk-navbar-container" uk-sticky>
+        <div class="uk-container uk-container-expand">
+            <nav class="uk-navbar" uk-navbar>
+                <div class="uk-navbar-left">
+                    <a class="uk-navbar-item uk-logo" href="./"><img src="img/logo/logo.svg" alt="" height="32px" width="32px"><span class="uk-text-bold uk-text-default">大阪市コロナワクチンマップ</span></a>
+                </div>
+                <div class="uk-navbar-right">
+                    <div class="uk-position-relative tm-hamburger uk-hidden@m">
+                        <a href="#offcanvas" class="uk-navbar-toggle" uk-navbar-toggle-icon uk-toggle></a>
+                        <div class="uk-position-absolute"><span>絞り込み</span></div>    
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div id="sidebar-left" class="tm-sidebar-left uk-visible@m">
+        <div class="sidenav">
+            <form id="form1" name="form1" class="uk-form-stacked">
+                <!-- page.index.js により挿入 -->
+            </form>
+        </div>
+    </div>
+    
+    <div id="main" class="tm-main">
+        <div id="content" class="uk-position-relative">
+            <div id="map-canvas">
+                <!-- page.index.js により挿入 -->
+            </div>
+            <div id="map-current-position-button" class="uk-position-absolute uk-box-shadow-small">
+                <a href="#" class="uk-button uk-button-default"><i class="fas fa-map-marker-alt uk-margin-small-right"></i>現在地へ移動</a>
+            </div>
+            <div id="map-guide" class="uk-position-absolute uk-box-shadow-small">
+                <div class="uk-hidden@m">
+                    <button class="uk-button uk-button-default" type="button"><span class="uk-margin-small-right" uk-icon="list"></span>凡例</button>
+                    <div uk-dropdown="mode: click">
+                        <ul class="uk-list uk-margin-remove tm-guide">
+                            <!-- page.index.js により挿入 -->
+                        </ul>
+                    </div>
+                </div>
+                <div class="uk-visible@m">
+                    <div class="uk-card uk-card-default uk-padding-small">
+                        <ul class="uk-margin-remove" uk-accordion>
+                            <li class="uk-open">
+                                <a class="uk-accordion-title uk-text-small" href="#">凡例</a>
+                                <div class="uk-accordion-content">
+                                    <ul class="uk-list uk-margin-remove tm-guide">
+                                        <!-- page.index.js により挿入 -->
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="offcanvas" class="tm-offcanvas" uk-offcanvas="mode: push; overlay: true">
+        <div class="uk-offcanvas-bar">
+            <div class="uk-panel">
+                <div class="sidenav">
+                    <form id="form2" name="form2" class="uk-form-stacked">
+                        <!-- page.index.js により挿入 -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/jquery.functions.js?version=0.0.4"></script>
+    <script src="js/page.all.js?version=0.0.4"></script>
+    <script src="js/page.index.js?version=0.0.14"></script>
+
+    <!-- Sibulla tracking code start -->
+    <script type="text/javascript">
+        (function(){ var b = document.getElementsByTagName('script')[0],sib = document.createElement('script');
+        sib.type = 'text/javascript';sib.async = true;
+        sib.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'ma001.sibulla.com/dekatag/access?id=aGaskA6u';
+        b.parentNode.insertBefore(sib,b);}());
+    </script>
+    <!-- /Sibulla tracking code end -->
+    
+</body>
+</html>
